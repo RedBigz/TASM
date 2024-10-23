@@ -26,6 +26,6 @@ public class Logging
             _ => throw new ArgumentOutOfRangeException(nameof(level), level, null)
         };
         
-        Console.WriteLine($"\x1b[0m[{ansiColor}{context}\x1b[0m] - \x1b[38;2;128;128;128m{message}\x1b[0m");
+        Console.WriteLine($"\x1b[0m[{ansiColor}{context}\x1b[0m] - \x1b[0m{message}");
     }
 }
