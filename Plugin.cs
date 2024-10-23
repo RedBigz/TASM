@@ -7,7 +7,6 @@ public class Plugin : BaseUnityPlugin
 {
     private void Awake()
     {
-        // Plugin startup logic
-        Logger.LogInfo("TASM plugin loaded!");
+        Logging.Log(Logging.LogLevel.Info, "TASM", "TASM Plugin loaded!");
     }
 }
