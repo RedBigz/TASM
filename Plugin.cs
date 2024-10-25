@@ -1,5 +1,6 @@
 ﻿using BepInEx;
 using HarmonyLib;
+using TASM.Modules;
 
 namespace TASM;
 
@@ -16,6 +17,9 @@ public class Plugin : BaseUnityPlugin
         _harmony.PatchAll();
         
         Logging.Log(Logging.LogLevel.Info, "TASM", "Patched game.");
+        
+        // Get annotations and add them to the command list
+        CommandList.Gather();
     }
 
     private void OnDestroy()

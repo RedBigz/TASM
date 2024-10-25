@@ -17,6 +17,24 @@ public static class RPCListener
 
         switch (opcode)
         {
+            case EventCode.ChatMessage:
+                byte supposedSender = buffer[0];
+                string text = Encoding.ASCII.GetString(buffer[2..^1].Where(c => c != 0).ToArray());
+
+                var player = Util.PlayerFromId(sender, __instance);
+
+                Logging.Log(Logging.LogLevel.Info, "Chat", $"{player.PlayerName}: {text}");
+
+                if (text.StartsWith("/"))
+                {
+                    string[] args = text[1..].Split(" ");
+
+                    if (args.Length == 0) break;
+                    
+                    CommandList.Invoke(args[0], args[1..], player);
+                }
+                
+                break;
         }
     }
 }
