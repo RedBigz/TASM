@@ -27,7 +27,7 @@ public static class CommandList
             if (commandAttribute == null) continue;
 
             Logging.Log(Logging.LogLevel.Info, "Commands",
-                $"Found Command {commandAttribute.Name}, Class: {type.FullName}");
+                $"Found Command {commandAttribute.Name}, Class: {type.FullName}, Reference: {commandAttribute.Reference}, Permission: {commandAttribute.Permission}");
 
             CommandInfo commandInfo = new()
             {
