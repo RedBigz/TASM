@@ -2,20 +2,9 @@ using System;
 using System.Reflection;
 using System.Collections.Generic;
 using Landfall.Network;
+using TASM.PluginBase;
 
 namespace TASM.Modules;
-
-[AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
-public class CommandAttribute : Attribute
-{
-    public string Name;
-    public string Reference;
-}
-
-[AttributeUsage(AttributeTargets.Method)]
-public class CommandEntryAttribute : Attribute
-{
-}
 
 public struct CommandInfo
 {
