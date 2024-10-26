@@ -34,6 +34,6 @@
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\TASM.PluginBase\TASM.PluginBase.csproj" />
+    <ProjectReference Include="..\TASM.Common\TASM.Common.csproj" />
   </ItemGroup>
 </Project>

@@ -2,7 +2,7 @@ using System;
 using System.Reflection;
 using System.Collections.Generic;
 using Landfall.Network;
-using TASM.PluginBase;
+using TASM.Common;
 
 namespace TASM.Modules;
 

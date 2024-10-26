@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TASM", "TASM\TASM.csproj", "{7FE48D2D-2954-48B3-9FF7-BBEE0E1EF3F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginBase", "TASM.PluginBase\TASM.PluginBase.csproj", "{9E1A64A4-58F0-482D-8B46-2E7BEDFD0EB2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TASM.Common", "TASM.Common\TASM.Common.csproj", "{9E1A64A4-58F0-482D-8B46-2E7BEDFD0EB2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

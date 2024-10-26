@@ -1,4 +1,4 @@
-namespace TASM.PluginBase;
+namespace TASM.Common;
 
 [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
 public class CommandAttribute : Attribute
