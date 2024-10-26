@@ -3,7 +3,7 @@ using System.IO;
 using System.Text;
 using Landfall.Network;
 
-namespace TASM.Helpers;
+namespace TASM.Common.Helpers;
 
 public static class Notification
 {

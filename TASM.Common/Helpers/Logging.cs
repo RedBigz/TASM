@@ -1,6 +1,6 @@
 using System;
 
-namespace TASM;
+namespace TASM.Common.Helpers;
 
 /// <summary>
 /// A log library similar to the one used by TABG's dedicated server

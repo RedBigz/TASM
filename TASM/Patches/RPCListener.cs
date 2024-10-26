@@ -2,7 +2,7 @@ using System.Linq;
 using System.Text;
 using HarmonyLib;
 using Landfall.Network;
-using TASM.Helpers;
+using TASM.Common.Helpers;
 using TASM.Modules; // This patch CAN use TABG's chat listening system, but I'm lazy.
 
 namespace TASM.Patches;

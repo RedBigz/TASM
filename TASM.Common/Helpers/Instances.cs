@@ -1,7 +1,6 @@
-using System.Reflection;
 using Landfall.Network;
 
-namespace TASM.Helpers;
+namespace TASM.Common.Helpers;
 
 public class Instances
 {
