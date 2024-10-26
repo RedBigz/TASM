@@ -32,4 +32,8 @@
       <HintPath>gamelibs\Assembly-CSharp.dll</HintPath>
     </Reference>
   </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\TASM.PluginBase\TASM.PluginBase.csproj" />
+  </ItemGroup>
 </Project>
