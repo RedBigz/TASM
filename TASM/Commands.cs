@@ -10,12 +10,14 @@ public struct CommandInfo
 {
     public string Name;
     public string Reference;
+    public CommandPermission Permission;
     public Type Class;
 }
 
 public static class CommandList
 {
     public static Dictionary<string, CommandInfo> Commands = new();
+    public static Dictionary<TABGPlayerServer, CommandPermission> UserPermissions = new();
 
     public static void Gather()
     {
@@ -38,6 +40,14 @@ public static class CommandList
         }
     }
 
+    static bool CheckPermission(CommandPermission permission, TABGPlayerServer player)
+    {
+        if (UserPermissions.TryGetValue(player, out var userPermission))
+            return permission >= userPermission;
+
+        return permission == CommandPermission.Everyone;
+    }
+
     public static void Invoke(string reference, string[] args, TABGPlayerServer player)
     {
         Logging.Log(Logging.LogLevel.Warning, "Commands",
@@ -54,8 +64,12 @@ public static class CommandList
 
                         arguments.AddRange(new[] { player });
                         arguments.AddRange(args!);
-                        
-                        method.Invoke(null, arguments.ToArray());
+
+                        if (CheckPermission(commandInfo.Permission, player))
+                            method.Invoke(null, arguments.ToArray());
+                        else
+                            Logging.Log(Logging.LogLevel.Error, "Commands",
+                                $"{player.PlayerName} does not have permission {commandInfo.Permission}");
                     }
                 }
             }
