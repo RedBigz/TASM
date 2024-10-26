@@ -3,7 +3,7 @@ using TASM.PluginBase;
 
 namespace TASM.Modules;
 
-[Command(Name = "Hello World", Reference = "util::hello")]
+[Command(name: "Hello World", reference: "hello", permission: CommandPermission.Everyone)]
 public class HelloWorld
 {
     [CommandEntry]
