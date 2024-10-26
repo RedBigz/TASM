@@ -8,6 +8,6 @@ public class HelloWorld
     [CommandEntry]
     public static void Run(TABGPlayerServer player)
     {
-        Logging.Log(Logging.LogLevel.Info, "HelloWorld", $"Hello, {player.PlayerName}!");
+        Helpers.Notification.Notify(player, $"Hello, {player.PlayerName}!");
     }
 }
