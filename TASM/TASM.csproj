@@ -29,7 +29,7 @@
   
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>gamelibs\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\GameLibs\Assembly-CSharp.dll</HintPath>
     </Reference>
   </ItemGroup>
   
