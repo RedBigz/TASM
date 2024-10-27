@@ -1,6 +1,6 @@
 namespace TASM.Common;
 
-[AttributeUsage(AttributeTargets.Class)]
+[AttributeUsage(AttributeTargets.Assembly)]
 public class GamePluginAttribute : Attribute
 {
     public string Name;
