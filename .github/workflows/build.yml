@@ -1,0 +1,33 @@
+name: Build Solution
+
+on: [ push ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 6.0.x
+      - name: Download TABG Assemblies
+        run: |
+          mkdir GameLibs
+          curl -o ./GameLibs/Assembly-CSharp.dll https://redbigz.com/lfs/TABG/Assembly-CSharp.stripped.dll
+          curl -o ./GameLibs/UnityEngine.CoreModule.dll https://redbigz.com/lfs/TABG/UnityEngine.CoreModule.dll
+      - name: Build Solution
+        run: dotnet build -c release
+      - name: Upload Binaries
+        uses: actions/upload-artifact@v4
+        with:
+          name: TASM
+          path: |
+            TASM/bin/Release/netstandard2.1/*
+            TASM.Common/bin/Release/netstandard2.1/*
+      - name: Upload Example Plugin
+        uses: actions/upload-artifact@v4
+        with:
+          name: ExamplePlugin
+          path: |
+            ExamplePlugin/bin/Release/netstandard2.1/*
