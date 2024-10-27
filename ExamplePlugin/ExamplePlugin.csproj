@@ -20,4 +20,9 @@
         </Reference>
     </ItemGroup>
 
+    <Target Name="PostBuild" AfterTargets="Build">
+        <Delete Files="$(OutputPath)TASM.Common.dll"/>
+        <Delete Files="$(OutputPath)TASM.Common.pdb"/>
+    </Target>
+
 </Project>
