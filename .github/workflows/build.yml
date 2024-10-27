@@ -18,16 +18,18 @@ jobs:
           curl -o ./GameLibs/UnityEngine.CoreModule.dll https://redbigz.com/lfs/TABG/UnityEngine.CoreModule.dll
       - name: Build Solution
         run: dotnet build -c release
-      - name: Upload Binaries
+      - name: Upload TASM
         uses: actions/upload-artifact@v4
         with:
           name: TASM
-          path: |
-            TASM/bin/Release/netstandard2.1/*
-            TASM.Common/bin/Release/netstandard2.1/*
+          path: "TASM/bin/Release/netstandard2.1/*"
+      - name: Upload TASM.Common
+        uses: actions/upload-artifact@v4
+        with:
+          name: TASM.Common
+          path: "TASM.Common/bin/Release/netstandard2.1/*"
       - name: Upload Example Plugin
         uses: actions/upload-artifact@v4
         with:
           name: ExamplePlugin
-          path: |
-            ExamplePlugin/bin/Release/netstandard2.1/*
+          path: "ExamplePlugin/bin/Release/netstandard2.1/*"
