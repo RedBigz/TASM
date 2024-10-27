@@ -27,6 +27,6 @@ public static class Notification
             bw.Write(unicodeText);
         }
 
-        Instances.GameServerClient.SendMessageToClients(EventCode.ThrowChatMessage, bytes, player.PlayerIndex, true);
+        Instances.GameServerClient?.SendMessageToClients(EventCode.ThrowChatMessage, bytes, player.PlayerIndex, true);
     }
 }
