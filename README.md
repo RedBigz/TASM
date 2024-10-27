@@ -24,11 +24,11 @@ Then, navigate to the repo by running `cd TASM`.
 ### 2. Referencing Game Assemblies
 Since I cannot legally distribute TABG's source code, you will have to reference your game assemblies. I made it fairly easy to do this by running:
 
-*(You will need to substitute the path to TDS [TABG Dedicated Server] if you installed it in a different location)**
 #### powershell
 ```powershell
-cp -Recurse "C:\Program Files (x86)\Steam\steamapps\common\TotallyAccurateBattlegroundsDedicatedServer\TABG_Data\Managed\" GameLibs
+Copy-Item -Recurse "C:\Program Files (x86)\Steam\steamapps\common\TotallyAccurateBattlegroundsDedicatedServer\TABG_Data\Managed\" GameLibs
 ```
+*(You will need to substitute the path to TDS [TABG Dedicated Server] if you installed it in a different location)*
 
 ### 3. Building
 Just plop the Solution into the IDE of your choice and press **Build Solution**.
