@@ -25,6 +25,9 @@ public class Plugin : BaseUnityPlugin
         
         // Setup paths
         PathManager.SetupPaths();
+        
+        // Load plugins
+        PluginLoader.LoadAllPlugins();
     }
 
     private void OnDestroy()
