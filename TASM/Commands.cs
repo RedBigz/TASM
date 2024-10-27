@@ -20,9 +20,9 @@ public static class CommandList
     public static Dictionary<string, CommandInfo> Commands = new();
     public static Dictionary<TABGPlayerServer, CommandPermission> UserPermissions = new();
 
-    public static void Gather()
+    public static void Gather(Assembly assembly)
     {
-        foreach (var type in Assembly.GetExecutingAssembly().GetTypes())
+        foreach (var type in assembly.GetTypes())
         {
             var commandAttribute = type.GetCustomAttribute<CommandAttribute>();
             if (commandAttribute == null) continue;

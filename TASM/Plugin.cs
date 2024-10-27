@@ -1,4 +1,5 @@
-﻿using BepInEx;
+﻿using System.Reflection;
+using BepInEx;
 using HarmonyLib;
 using TASM.Common.Helpers;
 using TASM.Modules;
@@ -20,7 +21,7 @@ public class Plugin : BaseUnityPlugin
         Logging.Log(Logging.LogLevel.Info, "TASM", "Patched game.");
 
         // Get annotations and add them to the command list
-        CommandList.Gather();
+        CommandList.Gather(Assembly.GetExecutingAssembly());
         
         // Setup paths
         PathManager.SetupPaths();
