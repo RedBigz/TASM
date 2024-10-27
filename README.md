@@ -3,6 +3,16 @@
 
 This mod adds plugin support to Totally Accurate Battlegrounds' server.
 
+## Status
+
+| Planned        | Status             | Planned work                  |
+|----------------|--------------------|-------------------------------|
+| Plugin Support | <center>➖</center> | Plugin loading                |
+| Permissions    | <center>➖</center> | Adding permissions to players |
+| Commands       | <center>✅</center> | N/A                           |
+
+If you can help out with any of these, feel free to submit a [PR](https://github.com/RedBigz/TASM/pulls).
+
 ## Installation Instructions
 ### 1. Clone the Repo
 #### Using Git
