@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <LangVersion>latest</LangVersion>
+        <Nullable>enable</Nullable>
+        <EnableDynamicLoading>true</EnableDynamicLoading>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\TASM.Common\TASM.Common.csproj">
+            <CopyToOutputDirectory>never</CopyToOutputDirectory>
+        </ProjectReference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Reference Include="Assembly-CSharp">
+            <HintPath>..\GameLibs\Assembly-CSharp.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+    </ItemGroup>
+
+</Project>

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TASM", "TASM\TASM.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TASM.Common", "TASM.Common\TASM.Common.csproj", "{9E1A64A4-58F0-482D-8B46-2E7BEDFD0EB2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamplePlugin", "ExamplePlugin\ExamplePlugin.csproj", "{7CFDFB50-28FD-4889-9264-5344B33A507D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{9E1A64A4-58F0-482D-8B46-2E7BEDFD0EB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E1A64A4-58F0-482D-8B46-2E7BEDFD0EB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E1A64A4-58F0-482D-8B46-2E7BEDFD0EB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CFDFB50-28FD-4889-9264-5344B33A507D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CFDFB50-28FD-4889-9264-5344B33A507D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CFDFB50-28FD-4889-9264-5344B33A507D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CFDFB50-28FD-4889-9264-5344B33A507D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
