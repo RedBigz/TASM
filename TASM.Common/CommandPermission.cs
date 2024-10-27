@@ -1,5 +1,8 @@
 namespace TASM.Common;
 
+/// <summary>
+/// The permission levels for commands.
+/// </summary>
 public enum CommandPermission
 {
     Everyone, // All Players

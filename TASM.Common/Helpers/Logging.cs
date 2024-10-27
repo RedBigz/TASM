@@ -15,6 +15,13 @@ public class Logging
         Error,
     }
     
+    /// <summary>
+    /// Logs a message.
+    /// </summary>
+    /// <param name="level">The log level of the message.</param>
+    /// <param name="context">The context of the message.<br /><i>e.g. <c>"HelloWorld"</c> -> [HelloWorld] - <paramref name="message"/></i></param>
+    /// <param name="message">The message to be logged.</param>
+    /// <exception cref="ArgumentOutOfRangeException">An invalid log level was specified.</exception>
     public static void Log(LogLevel level, string context, string message)
     {
         string ansiColor = level switch

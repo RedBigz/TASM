@@ -1,5 +1,8 @@
 namespace TASM.Common;
 
+/// <summary>
+/// This class holds the paths of all TASM-related folders.
+/// </summary>
 public static class Paths
 {
     private static string? _tasmRoot;
