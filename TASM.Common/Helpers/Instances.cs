@@ -4,5 +4,5 @@ namespace TASM.Common.Helpers;
 
 public static class Instances
 {
-    public static ServerClient GameServerClient;
+    public static ServerClient? GameServerClient;
 }
