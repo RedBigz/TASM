@@ -44,4 +44,5 @@
         <Delete Files="$(OutputPath)TASM.Common.dll"/>
         <Delete Files="$(OutputPath)TASM.Common.pdb"/>
     </Target>
+    
 </Project>
