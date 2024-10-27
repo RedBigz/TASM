@@ -21,6 +21,9 @@ public class Plugin : BaseUnityPlugin
 
         // Get annotations and add them to the command list
         CommandList.Gather();
+        
+        // Setup paths
+        PathManager.SetupPaths();
     }
 
     private void OnDestroy()
