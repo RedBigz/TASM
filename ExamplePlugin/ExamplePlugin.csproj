@@ -13,11 +13,20 @@
         </ProjectReference>
     </ItemGroup>
 
+    <PropertyGroup>
+        <!-- Your Server Folder -->
+        <TABGFolder>C:\Program Files (x86)\Steam\steamapps\common\TotallyAccurateBattlegroundsDedicatedServer</TABGFolder>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <TABGManaged>$(TABGFolder)\TABG_Data\Managed</TABGManaged>
+    </PropertyGroup>
+
     <ItemGroup>
-        <Reference Include="Assembly-CSharp">
-            <HintPath>..\GameLibs\Assembly-CSharp.dll</HintPath>
-            <Private>false</Private>
-        </Reference>
+        <PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.4.2" PrivateAssets="all" />
+        
+        <Reference Include="$(TABGManaged)\Assembly-CSharp.dll" Private="false" Publicize="true"/>
+        <Reference Include="$(TABGManaged)\UnityEngine.CoreModule.dll" Private="false" Publicize="true"/>
     </ItemGroup>
 
     <Target Name="PostBuild" AfterTargets="Build">
